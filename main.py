@@ -5,7 +5,6 @@ from scheduler import (
     check_scheduled_reminders,
     Command
 )
-from config import API_TOKEN
 from bot import dp
 
 # Обработчики команд

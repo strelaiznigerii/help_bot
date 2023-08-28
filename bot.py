@@ -2,15 +2,14 @@ from aiogram import Bot, Dispatcher, types
 from aiogram.contrib.middlewares.logging import LoggingMiddleware
 from aiogram.utils import executor
 from aiogram.contrib.fsm_storage.memory import MemoryStorage  # Импорт MemoryStorage
-#from config import API_TOKEN
 from aiogram.dispatcher.filters import Command, Text
 from aiogram.contrib.middlewares.logging import LoggingMiddleware
 import logging
 from aiogram.dispatcher.filters.builtin import Command
-
+import os
 
 logging.basicConfig(level=logging.INFO)
-API_TOKEN = "6133666647:AAH_lL-XcBRF3BPah4NqLKKbe2AlLfaP7n0"
+API_TOKEN = os.environ["API_TOKEN"]
 bot = Bot(token=API_TOKEN)
 storage = MemoryStorage()  # Инициализация хранилища
 dp = Dispatcher(bot, storage=storage)  # Передача хранилища в диспетчер

@@ -44,6 +44,6 @@ venv
 ### cache
 
 __pycache__
-
+reminders.db
 
 # End of https://www.toptal.com/developers/gitignore/api/macos
